@@ -369,7 +369,7 @@ impl TsMuxer {
     ) -> Result<u16, MpegTsError> {
         let pmt = &mut self.pat.pmt[pmt_index];
 
-        if pmt.streams.len() == 4 {
+        if pmt.streams.len() == 16 {
             return Err(MpegTsError {
                 value: MpegTsErrorValue::StreamCountExeceed,
             });
